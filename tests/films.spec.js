@@ -287,7 +287,7 @@ describe('Function "orderByYear"', () => {
 });
 
 // Exercise 6
-/*describe('Function "moviesAverageByCategory"', () => {
+describe('Function "moviesAverageByCategory"', () => {
   it('should be declared', () => {
     expect(typeof moviesAverageByCategory).toBe('function');
   });
@@ -340,7 +340,7 @@ describe('Function "orderByYear"', () => {
     expect(moviesAverageByCategory([{ score: 6 }, { score: '' }, {}])).toBe(2);
   });
   */
-  /*it('should return average even if one of the movies does not have score', () => {
+  it('should return average even if one of the movies does not have score', () => {
     expect(moviesAverageByCategory([
       { score: 5,
         genre: ['Action'], 
@@ -353,7 +353,7 @@ describe('Function "orderByYear"', () => {
   });
 
 });
-
+/*
 // Exercise 7
 describe('Function "hoursToMinutes"', () => {
   it('should be declared', () => {

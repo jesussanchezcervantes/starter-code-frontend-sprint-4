@@ -247,7 +247,7 @@ describe('Function "orderAlphabetically"', () => {
 });
 
 // Exercise 5
-/*describe('Function "orderByYear"', () => {
+describe('Function "orderByYear"', () => {
   it('should be declared', () => {
     expect(typeof orderByYear).toBe('function');
   });
@@ -287,7 +287,7 @@ describe('Function "orderAlphabetically"', () => {
 });
 
 // Exercise 6
-describe('Function "moviesAverageByCategory"', () => {
+/*describe('Function "moviesAverageByCategory"', () => {
   it('should be declared', () => {
     expect(typeof moviesAverageByCategory).toBe('function');
   });

@@ -22,19 +22,26 @@ return moviesAverage;
 
 // Exercise 4:  Alphabetic order by title 
 function orderAlphabetically(movies) {
-  let titleMovies = movies.map((movie) => movie.title); //ordenamos las peliculas por titulo
-  let titlesMoviesOrder = titleMovies.sort ((titleA, titleB) => { //ordenamos alfabeticamente
-    if (titleA < titleB) {return -1;}
-    if (titleA > titleB) {return 1;}
-    return 0;
-});
-  let top20movies = titlesMoviesOrder.slice (0,20);
+  let titleMovies = movies.map((movie) => movie.title); //obtengo un array de los titulos de las peliculas
+  let titlesMoviesOrder = titleMovies.sort ((titleA, titleB) => (titleA > titleB) ? 1 : -1)//ordenamos alfabeticamente usando el operador ternario
+  let top20movies = titlesMoviesOrder.slice (0,20);//devuelve unicamente los 20 primeros titulos.
+
   return top20movies;
 }
 
 // Exercise 5: Order by year, ascending
-function orderByYear() {
+function orderByYear(movies) {
+  let orderedByYears = movies.slice().sort ((movieA, movieB) => {
+    if (movieA.year > movieB.year) {return 1}
+    if (movieA.year < movieB.year) {return -1}
+    if (movieA.year === movieB.year){
+      if (movieA.title > movieB.title) {return 1}
+      if (movieA.title < movieB.title) {return -1}
+      return 0;
+    }  
+  });
 
+  return orderedByYears;
 }
 
 // Exercise 6: Calculate the average of the movies in a category
